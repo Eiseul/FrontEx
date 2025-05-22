@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 만들기</title>
+</head>
+<body>
+    <form action="submit_form.php" method="post" style="max-width:400px; margin:20px auto;">
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+            <label for="name" style="width: 80px;">이름:</label>
+            <input type="text" id="name" name="name" required style="flex:1;">
+        </div>
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+            <label for="email" style="width: 80px;">이메일:</label>
+            <input type="email" id="email" name="email" required style="flex:1;">
+        </div>
+        <style>
+            form {
+            margin: 20px 0 20px 40px;
+            max-width: 400px;
+            margin: 20px 0;
+            }
+            input[type="text"],
+            input[type="email"],
+            textarea {
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            padding: 10px 12px;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+            outline: none;
+            transition: box-shadow 0.2s, border-color 0.2s;
+            background: #f9fbfd;
+            }
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            textarea:focus {
+            border-color: #4f8cff;
+            box-shadow: 0 4px 16px rgba(79, 140, 255, 0.18);
+            background: #fff;
+            }
+            label {
+            font-weight: 600;
+            color: #2d3a4a;
+            text-shadow: 0 1px 2px rgba(79, 140, 255, 0.08);
+            letter-spacing: 0.02em;
+            }
+            input[type="submit"] {
+            background: linear-gradient(90deg, #4f8cff 0%, #38e6c5 100%);
+            color: #fff;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(79, 140, 255, 0.2);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: box-shadow 0.2s, transform 0.2s;
+            }
+            input[type="submit"]:hover {
+            box-shadow: 0 6px 18px rgba(56, 230, 197, 0.25);
+            transform: translateY(-2px) scale(1.03);
+            }
+        </style>
+        <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+            <label for="message" style="width: 80px; margin-top:6px;">메시지:</label>
+            <textarea id="message" name="message" rows="4" cols="50" style="flex:1;"></textarea>
+        </div>
+        <div style="text-align: right;">
+            <input type="submit" value="제출">
+        </div>
+    </form>
+</body>
+</html>

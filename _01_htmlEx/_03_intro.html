@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회사 인트로 페이지</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f6fa;
+        }
+        .navbar {
+            background: #222;
+            color: #fff;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .navbar nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 1em;
+            transition: color 0.2s;
+        }
+        .navbar nav a:hover {
+            color: #ffd700;
+        }
+        .intro-container {
+            display: flex;
+            height: 80vh;
+            margin: 40px 0;
+            justify-content: center;
+            align-items: center;
+        }
+        .intro-image {
+            flex: 1;
+            height: 70vh;
+            background-size: cover;
+            background-position: center;
+            border-radius: 16px;
+            margin: 0 24px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        .intro-left {
+            background-image: url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80');
+        }
+        .intro-right {
+            background-image: url('https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=800&q=80');
+        }
+        .company-info {
+            text-align: center;
+            margin-top: 40px;
+            color: #333;
+        }
+        .company-info h1 {
+            font-size: 2.5em;
+            margin-bottom: 16px;
+        }
+        .company-info p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">MyCompany</div>
+        <nav>
+            <a href="#">회사소개</a>
+            <a href="#">서비스</a>
+            <a href="#">팀</a>
+            <a href="#">문의하기</a>
+        </nav>
+    </div>
+    <div class="intro-container">
+        <div class="intro-image intro-left" title="열정적인 회의 이미지"></div>
+        <div class="intro-image intro-right" title="프로페셔널한 직원 이미지"></div>
+    </div>
+    <div class="company-info">
+        <h1>함께 성장하는 기업, MyCompany</h1>
+        <p>
+            MyCompany는 열정과 전문성을 바탕으로 고객의 성공을 함께 만들어갑니다.<br>
+            혁신적인 아이디어와 체계적인 업무 프로세스로 최고의 가치를 제공합니다.
+        </p>
+    </div>
+</body>
+</html>
