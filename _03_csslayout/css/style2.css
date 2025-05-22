@@ -1,5 +1,6 @@
 .container{
     display:flex;   /* flex 레이아웃 사용 */
+    flex-direction: row-reverse;
 }
 
 .item{

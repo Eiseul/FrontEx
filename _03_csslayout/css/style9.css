@@ -1,10 +1,11 @@
 .container{
-    display:flex;   /* flex 레이아웃 사용 */
+    display:grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 10px;
 }
 
 .item{
     background: #0bd;
     color:#fff;
-    margin:10px;
     padding:10px;
 }
