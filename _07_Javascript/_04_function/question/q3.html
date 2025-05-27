@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>숫자 증가기</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f9f9f9;
+        }
+        .number {
+            font-size: 7em;
+            font-weight: bold;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        button {
+            font-size: 1em;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 6px;
+            background: #1976d2;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <div class="number" id="number">0.0</div>
+    <div class="buttons">
+        <button id="startBtn">시작</button>
+        <button id="stopBtn">멈춤</button>
+    </div>
+    <script>
+        let count = 0;
+        let intervalId = null;
+
+        const numberEl = document.getElementById('number');
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+
+        startBtn.onclick = function() {
+            if (intervalId !== null) return;
+            intervalId = setInterval(() => {
+                count += 1;
+                numberEl.textContent = (count / 10).toFixed(1);
+            }, 100);
+        };
+
+        stopBtn.onclick = function() {
+            clearInterval(intervalId);
+            intervalId = null;
+        };
+    </script>
+</body>
+</html>
